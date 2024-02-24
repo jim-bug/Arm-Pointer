@@ -12,12 +12,19 @@ void setup(){
 }
 void loop(){
     if (digitalRead(SW1)){
-        x += 10;
+        delay(50);
+        x += 100;
+        
     }
     if (digitalRead(SW2)){
-        y += 10;
+        delay(50);
+        y += 100;
     }
-    Serial.println(x);
-    Serial.println(y);
-    Serial.println(digitalRead(SW3));
+    Serial.print(x);
+    Serial.print(" ");
+    Serial.print(y);
+    Serial.print(" ");
+    Serial.print(digitalRead(SW3));
+    Serial.print("\n");
+    delay(20);
 }
